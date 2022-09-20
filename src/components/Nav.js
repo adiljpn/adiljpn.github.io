@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StaticImage } from 'gatsby-plugin-image'
+import logo from '../assets/img/logo.svg'
 
-const Navbar = styled.nav``
+const Navbar = styled.nav`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
 const Nav = () => {
     return (
         <Navbar>
-            <img src="../assets/img/logo.svg" alt="logo" />
+            <img src={logo} alt="logo" />
         </Navbar>
     )
 }
