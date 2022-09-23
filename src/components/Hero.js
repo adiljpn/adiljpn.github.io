@@ -1,27 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
-import hero from '../assets/img/hero.svg'
+import hero from '../assets/img/eji.gif'
 import { MdArrowRightAlt } from 'react-icons/md'
 
 const Hero = () => {
     return (
-        <HeroCard>
-            <img src={hero} alt="Hero" />
-            <h2>What’s good, Adil on line 🚀</h2>
-            <h3>
-                Desenvolvo ideias e ajudo a construir um mundo melhor através do
-                software. 
-            </h3>
-            <div className="btns">
-                <a href="/contact">Contact</a>
-                <div className="download">
-                    <button type="">Download CV</button>
-                    <MdArrowRightAlt className="icon" />
+        <Container>
+            <HeroCard>
+                <img src={hero} alt="Hero" />
+                <h2>What’s good, Adil on line 🚀</h2>
+                <h3>
+                    Desenvolvo ideias e ajudo a construir um mundo melhor
+                    através do software.
+                </h3>
+                <div className="btns">
+                    <a href="/">Contact</a>
+                    <div className="download">
+                        <button type="">Download CV</button>
+                        <MdArrowRightAlt className="icon" />
+                    </div>
                 </div>
-            </div>
-        </HeroCard>
+            </HeroCard>
+        </Container>
     )
 }
+const Container = styled.div`
+    padding: 0 1rem;
+`
 
 const HeroCard = styled.section`
     display: flex;
@@ -33,27 +38,36 @@ const HeroCard = styled.section`
         0px 23px 30px rgba(171, 236, 214, 0.2);
     margin: 0 auto;
     margin-bottom: 5rem;
-    padding: 40px;
-    width: 750px;
+    padding: 60px 75px;
+    max-width: 750px;
+
     img {
-        width: 184px;
+        border-radius: 50%;
+        width: 185px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0px 6px 46px 13px rgba(244, 255, 228, 0.5);
+        user-select: none;
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 34px;
         font-weight: 500;
+        text-align: center;
+
         margin: 0;
         margin-bottom: 0.5rem;
     }
     h3 {
-        font-size: 40px;
+        font-size: 44px;
         font-weight: 500;
-        margin: 0;
         text-align: center;
+
+        margin: 0;
         margin-bottom: 2rem;
     }
     .btns {
         display: flex;
+        flex-wrap: wrap-reverse;
         align-items: center;
     }
     a {
@@ -86,8 +100,8 @@ const HeroCard = styled.section`
         background: transparent;
         border: none;
         font-size: 16px;
-        cursor: pointer;
         font-weight: 600;
+        cursor: pointer;
     }
 `
 

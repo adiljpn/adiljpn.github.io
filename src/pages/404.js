@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-function ErrorPage() {
+const ErrorPage = () => {
     return (
         <Layout>
             <section>

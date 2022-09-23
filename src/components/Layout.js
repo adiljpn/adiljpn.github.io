@@ -20,9 +20,6 @@ const GlobalStyle = createGlobalStyle`
 ${normalize}
 
 body { 
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   font-family: 'Rubik';
   color: #111827;
 }
